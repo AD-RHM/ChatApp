@@ -12,13 +12,17 @@ public class ChatMessage {
     @Getter @Setter
     private String sender;
     @Getter @Setter
-    private String message;
+    private String content;
     @Getter @Setter
-    private LocalDateTime time;
+    private MessageType type;
     @Getter @Setter
-    private Status type;
+    private String time;
 
-    public ChatMessage() {}
+    public enum MessageType {
+        CHAT,
+        JOIN,
+        LEAVE
+    }
 
 
 }
